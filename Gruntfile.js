@@ -7,8 +7,8 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['src/intro.js', 'src/project.js', 'src/outro.js'],
-        dest: 'dist/built.js',
+        src: ['public/client/*.js'],
+        dest: 'public/dist/<%= pkg.name %>.js',
       },
     },
 
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'dest/output.min.js': ['src/input1.js', 'src/input2.js']
+          'public/dist/<%= pkg.name %>.min.js': ['public/client/*.js']
         }
       }
     },
@@ -104,5 +104,6 @@ module.exports = function(grunt) {
     // add your deploy tasks here
   ]);
 
+  grunt.registerTask('default', ['concat', 'uglify']);
 
 };
