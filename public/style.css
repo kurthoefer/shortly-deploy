@@ -3,6 +3,7 @@ body {
   margin-top: 10px;
   font-family: arial, sans-serif;
   background-image: url(http://lifecdn.dailyburn.com/life/wp-content/uploads/2015/11/banana-cheerleader.gif);
+  background-size: cover;
 }
 
 a {
